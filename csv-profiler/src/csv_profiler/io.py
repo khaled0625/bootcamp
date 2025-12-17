@@ -9,7 +9,4 @@ def read_csv_rows(path: str | Path) -> list[dict[str, str]]:
         reader = DictReader(f)
         return [dict(row) for row in reader]
 
-# if __name__ == "__main__":
-#     x = read_csv_rows("/home/khaled/Agents/ADK/bootcamp/csv-profiler/src/data/sample.csv")
-#     print(x)
 
