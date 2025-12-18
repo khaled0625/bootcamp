@@ -45,6 +45,7 @@ Generated reports are written to the output/ directory:
 cd csv-profiler/src
 streamlit run app_profiler.py 
 ```
-
+## test in Streamlit Community Cloud
+#### https://bootcamp-mksgasnbhnhwb2uutmjbsm.streamlit.app/
 ## Screenshot
 ![streamlet UI](csv-profiler/image/img.png)
