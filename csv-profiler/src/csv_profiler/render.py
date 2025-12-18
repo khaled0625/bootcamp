@@ -89,3 +89,44 @@ def md_table_header() -> list[str]:
         "|---|---|---:|---|",
     ]
 
+def to_markdown(report: dict[str, str]) -> str:
+
+
+    rows = report["summary"]["rows"]
+    lines: list[str] = []
+
+
+    lines.append("## Summary")
+    lines.append(f"- Rows: {rows:,}")
+    lines.append(f"- Columns: {report['summary']['columns']:,}")
+    lines.append("")
+
+    lines.append("## Columns (table)")
+    lines.extend(md_table_header())
+
+    for name, col in report["columns"].items():
+        typ = col["type"]
+        stats = col["stats"]
+
+        missing = stats.get("missing", 0)
+
+        if typ == "number":
+            details = (
+                f"count={stats['count']}, "
+                f"unique={stats['unique']}, "
+                f"min={stats['min_value']}, "
+                f"max={stats['max_value']}, "
+                f"avg={stats['avg']:.2f}"
+            )
+        else:
+            details = (
+                f"unique={stats['unique']}, "
+                f"top={', '.join(t['value'] for t in stats['top'])}"
+            )
+
+        lines.append(
+            f"| {name} | {typ} | {missing} | {details} |"
+        )
+
+    return "\n".join(lines)
+

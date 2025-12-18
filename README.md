@@ -14,8 +14,15 @@ cd bootcamp
 ```
 #### Create a virtual environment :
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # active the environment
+python uv venv 
+```
+### active the environment linux/mac:
+```bash
+source .venv/bin/activate 
+```
+### active the environment Windows:
+```bash
+.venv/Scripts/activate 
 ```
 install the package:
 ```bash
@@ -32,3 +39,12 @@ uv pip install -r requirements.txt
 Generated reports are written to the output/ directory:
 -report.json
 -report.md
+
+## run streamlet
+```bash
+cd csv-profiler/src
+streamlit run app_profiler.py 
+```
+
+## Screenshot
+![streamlet UI](csv-profiler/image/img.png)
