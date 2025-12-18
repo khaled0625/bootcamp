@@ -50,7 +50,6 @@ if uploaded is not None:
     if len(rows[0]) == 0:
         st.warning("CSV has no headers (no columns detected).")
     df = pd.DataFrame(rows)
-    show_json = st.toggle("display json file", value=False)
     st.write("Filename:", uploaded.name)
     st.write("rows:", len(rows))
 
