@@ -1,3 +1,4 @@
+import requests
 import streamlit as st
 import csv
 from io import StringIO
@@ -40,6 +41,18 @@ st.title("CSV profiler")
 uploaded = st.file_uploader("upload a csv ", type="csv")
 
 
+
+if st.button("Predict"):
+    # Send request to FastAPI
+    response = requests.post(
+        "http://127.0.0.1:5522",
+        json={"text": uploaded}
+    )
+
+    if response.status_code == 200:
+        st.success(response.json()["message"])
+    else:
+        st.error("Failed to connect to backend.")
 
 if uploaded is not None:
     text = uploaded.getvalue().decode('utf-8-sig')

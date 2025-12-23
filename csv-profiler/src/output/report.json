@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "rows": 4,
+    "columns": 4,
+    "columns_names": [
+      "name",
+      "age",
+      "city",
+      "salary"
+    ]
+  },
+  "columns": {
+    "name": {
+      "type": "text",
+      "stats": {
+        "counts": 4,
+        "missing": 0,
+        "unique": 4,
+        "top": [
+          {
+            "value": "Aisha",
+            "count": 1
+          },
+          {
+            "value": "Fahad",
+            "count": 1
+          },
+          {
+            "value": "Noor",
+            "count": 1
+          },
+          {
+            "value": "salem",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "age": {
+      "type": "number",
+      "stats": {
+        "count": 3,
+        "unique": 3,
+        "missing": 1,
+        "nums": [
+          23.0,
+          29.0,
+          31.0
+        ],
+        "max_value": 31.0,
+        "min_value": 23.0,
+        "avg": 27.666666666666668
+      }
+    },
+    "city": {
+      "type": "text",
+      "stats": {
+        "counts": 3,
+        "missing": 1,
+        "unique": 3,
+        "top": [
+          {
+            "value": "Riyadh",
+            "count": 1
+          },
+          {
+            "value": "Jeddah",
+            "count": 1
+          },
+          {
+            "value": "Dammam",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "salary": {
+      "type": "number",
+      "stats": {
+        "count": 3,
+        "unique": 3,
+        "missing": 1,
+        "nums": [
+          12000.0,
+          9000.0,
+          15000.0
+        ],
+        "max_value": 15000.0,
+        "min_value": 9000.0,
+        "avg": 12000.0
+      }
+    }
+  }
+}
